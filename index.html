@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Invitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffccd5;
+            margin: 0;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #d63384;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #28a745;
+            color: white;
+        }
+        .no {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hey Nai ❤️</h1>
+        <p>Will you be my Valentine this year? 💖</p>
+        <button class="yes" onclick="acceptInvitation()">Yes</button>
+        <button class="no" onclick="rejectInvitation()">No</button>
+    </div>
+
+    <script>
+        let noCount = 0;
+        function acceptInvitation() {
+            alert("Yay! Can't wait for our special date! ❤️");
+        }
+        function rejectInvitation() {
+            noCount++;
+            const messages = [
+                "Are you sure? 😢",
+                "Think again... I'm super charming! 😏",
+                "Come on, don't break my heart 💔",
+                "I'll play your favorite songs all night! 🎶",
+                "Last chance... say yes! 🥺"
+            ];
+            if (noCount < messages.length) {
+                alert(messages[noCount - 1]);
+            } else {
+                alert("Fine... but I'll still show up with flowers! 🌹😆");
+            }
+        }
+    </script>
+</body>
+</html>
